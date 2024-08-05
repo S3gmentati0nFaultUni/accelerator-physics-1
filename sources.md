@@ -9,4 +9,11 @@ URL - https://home.cern/news/news/engineering/super-and-ferric-first-hl-lhc-comp
 
 
 
-
+QUOTE - mm-wiki
+The magnetic dipole moment of an object determines the magnitude of torque the object experiences in a given magnetic field. 
+[...]
+The magnetic moment also expresses the magnetic force effect of a magnet. The magnetic field of a magnetic dipole is proportional to its magnetic dipole moment.
+DATE - ...
+AUTHOR - Wikipedia
+TITLE - Magnetic Moment
+URL - https://en.wikipedia.org/wiki/Magnetic_moment
