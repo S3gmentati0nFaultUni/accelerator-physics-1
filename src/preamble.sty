@@ -26,7 +26,7 @@
 \usepackage{etoolbox,fancyhdr,xcolor}
 
 
-\usepackage{times}
+\usepackage{lmodern}
 
 
 \usepackage{hyperref}
@@ -59,7 +59,7 @@
 \setlength{\headheight}{15mm}
 \pagestyle{fancy}
 
-\bibliographystyle{apalike}
+\bibliographystyle{alpha}
 
 % Definition of a generic environment with custom numbering
 \newtheorem{innercustomgeneric}{\customgenericname}
@@ -207,6 +207,7 @@
 
 % Formatting
 \newcommand{\bm}[1]{\mathbf{#1}}
+\renewcommand{\i}[1]{\textit{#1}}
 
 \tikzset{
 	defv/.style={circle,minimum size=0.5cm,fill=cyan!20,draw=teal},
