@@ -17,3 +17,7 @@ DATE - ...
 AUTHOR - Wikipedia
 TITLE - Magnetic Moment
 URL - https://en.wikipedia.org/wiki/Magnetic_moment
+
+
+
+https://www.doitpoms.ac.uk/tlplib/superconductivity/bcs.php
