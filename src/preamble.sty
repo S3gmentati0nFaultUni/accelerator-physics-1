@@ -21,13 +21,15 @@
 \geometry{a4paper, left=2cm, right=2cm, top=1.5cm, bottom=3cm }
 \usepackage{caption}
 \usepackage{subcaption}
-\usepackage{natbib}
+\usepackage[
+	backend=biber,
+	maxalphanames=10,
+]{biblatex}
+\bibliography{tech.bib}
 
 \usepackage{etoolbox,fancyhdr,xcolor}
 
-
 \usepackage{lmodern}
-
 
 \usepackage{hyperref}
 \hypersetup{
@@ -58,8 +60,6 @@
 
 \setlength{\headheight}{15mm}
 \pagestyle{fancy}
-
-\bibliographystyle{alpha}
 
 % Definition of a generic environment with custom numbering
 \newtheorem{innercustomgeneric}{\customgenericname}
@@ -191,23 +191,27 @@
 \newcommand{\ve}[1]{\mathbf{#1}}
 \newcommand{\norm}[1]{||#1||}
 
-% Derivatives
-\newcommand{\pder}[2]{\frac{\partial{#1}}{\partial{#2}}}
-\newcommand{\der}[2]{\frac{d #1}{d #2}}
-
 % Chromatic measures definitions
 \newcommand{\cn}[1][G]{\mathcal{X}(#1)}
 \newcommand{\ci}[1][G]{\mathcal{X'}(#1)}
+
+% Formatting
+\newcommand{\bm}[1]{\mathbf{#1}}
+\renewcommand{\i}[1]{\textit{#1}}
+
+%%% Calculus macros
+\newcommand{\curl}[1]{\nabla \times \vec{#1}}
+\newcommand{\dngs}[1]{\nabla \cdot \vec{#1}}
+% Derivatives
+\newcommand{\pder}[2]{\frac{\partial{#1}}{\partial{#2}}}
+\newcommand{\der}[2]{\frac{d #1}{d #2}}
+%%%
 
 % Various other macros
 \newcommand{\smth}{\cdot}
 \newcommand{\minr}{\preceq}
 \newcommand{\nminr}{\npreceq}
 \newcommand{\das}{:=}
-
-% Formatting
-\newcommand{\bm}[1]{\mathbf{#1}}
-\renewcommand{\i}[1]{\textit{#1}}
 
 \tikzset{
 	defv/.style={circle,minimum size=0.5cm,fill=cyan!20,draw=teal},

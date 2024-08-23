@@ -63,27 +63,63 @@ più innovative nel campo della superconduzione a temperature elevate.
 
 \bigskip
 \phantomsection
-\makeatletter\def\@currentlabel{\texttt{(II)}}\makeatother
-\label{sec:quench}
+\label{sec:type-one}
 \noindent
-\textbf{SUPERCONDUTTORI DI TIPO I:}
+\textbf{EFFETTO MEISSNER E TIPI DI SUPERCONDUTTORI:}
+\\
+Prima di poter introdurre la differenza tra superconduttori del primo e del secondo tipo bisogna
+introdurre un'altra importante caratteristica dei superconduttori.
+
+Questi, infatti, hanno un comportamento diamagnetico, il che significa che sono in grado di
+espellere campi magnetici che normalmente li attraverserebbero. Questo comportamento, noto come
+Meissner effect, fu scoperto nel 1933 da Meissner e Ochsenfeld\cite{meissner}. Per quanto visto in
+precedenza la resistenza all'interno di un superconduttore a temperatura inferiore a $T_c$ è $0$,
+questo significa che in presenza di una certa densità di corrente $\ve{J}$ il campo elettrico
+all'interno del conduttore può essere calcolato come:
+\begin{equation}
+	\ve{E} = R \times \ve{J} = \ve{0}
+\end{equation}
+Quindi se consideriamo la legge di Ampere-Maxwell
+\begin{equation*}
+	\curl{E} = - \pder{\ve{B}}{t} = 0
+\end{equation*}
+Quanto illustrato sopra porterebbe quindi a dire che il campo magnetico all'interno del
+superconduttore è costante e quindi il flusso sarà a sua volta costante.
+
+In realtà il lavoro di Meissner ha dimostrato che il comportamento del superconduttore è ben
+diverso, infatti l'espulsione del campo magnetico deriva dalla presenza di "correnti di
+schermatura"\footnote{screening currents} sulla superficie del superconduttore che generano un
+campo magnetico opposto a quello imposto sul conduttore, cancellandone
+l'effetto\cite{super-fundamentals}. Ulteriori studi da parte dei fratelli London dimostrarono che,
+in realtà vi è un certo livello di penetrazione del campo magnetico all'interno del conduttore, ma
+l'intensità di quest'ultimo scala esponenzialmente con la distanza di penetrazione all'interno del
+materiale\cite{ssp}.
+
+I materiali superconduttori, sulla base di come si comportano in presenza di un campo magnetico
+esterno, sono di tipo I o tipo II.
+
+Tutti i materiali superconduttori di tipo I presentano una linea di demarcazione forte tra lo stato
+di repulsione del campo magnetico (\emph{meissner state}) e lo stato di "permeazione" del campo
+magnetico (\emph{normal state}). Questa
+caratteristica è resa evidente da Figura \ref{fig:phase-diagram}
+\begin{figure}[h!]
+	\centering
+
+	\includegraphics[scale=0.35]{fig/phase-diagram.jpg}
+	\caption{
+		Diagrammi di fase per superconduttori di tipo I e tipo
+		II\cite{super-types}
+	}\label{fig:phase-diagram}
+\end{figure}
 
 \bigskip
 \phantomsection
-\makeatletter\def\@currentlabel{\texttt{(III)}}\makeatother
-\label{sec:mariotto}
-\noindent
-\textbf{SUPERCONDUTTORI DI TIPO II:}
-
-\bigskip
-\phantomsection
-\makeatletter\def\@currentlabel{\texttt{(III)}}\makeatother
-\label{sec:mariotto}
+\label{sec:metallurgy}
 \noindent
 \textbf{CENNI DI METALLURGIA:}
 
-\bibliography{tech}
-
 \clearpage
+
+\printbibliography
 
 \end{document}
