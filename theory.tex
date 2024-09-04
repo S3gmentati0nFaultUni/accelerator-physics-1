@@ -1,11 +1,17 @@
 \documentclass[a4paper,10pt]{article}
 \usepackage{src/preamble}
+\usepackage[
+	backend=biber,
+	maxalphanames=10,
+]{biblatex}
+\bibliography{theory.bib}
+
 
 \begin{document}
 
 \noindent
 \begin{center}
-	\textbf{{\Large QUENCH DI MAGNETI SUPERCONDUTTORI}} \\
+	\textbf{{\Large RELAZIONE TEORICA - QUENCH DI MAGNETI SUPERCONDUTTORI}} \\
 \end{center}
 
 \noindent
@@ -43,9 +49,7 @@ di
 un dispositivo, che comporta la conversione dell'energia in esso contenuta in calore, il che può
 portare alla distruzione del dispositivo stesso se non controllata \cite{quench-pres}.
 
-Nel seguito cercherò di illustrare meglio cosa possa causare un fenomeno di quench
-\ref{sec:quench} e una specifica tecnica di analisi per prevederne la posizione all'interno del
-magnete superconduttore \ref{sec:mariotto}.
+Nel seguito cercherò di illustrare meglio cosa possa causare un fenomeno di quench\ref{sec:quench} e una specifica tecnica di analisi per prevederne la posizione all'interno del magnete superconduttore \ref{sec:mariotto}.
 
 In questo documento tralascerò la trattazione dei magneti superconduttori, che saranno oggetto di
 un
@@ -67,6 +71,6 @@ approfondimento a sè in un documento a loro dedicato.
 
 \clearpage
 
-\bibliography{theory}
+\printbibliography
 
 \end{document}
