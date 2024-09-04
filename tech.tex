@@ -1,11 +1,16 @@
 \documentclass[a4paper,10pt]{article}
 \usepackage{src/preamble}
+\usepackage[
+	backend=biber,
+	maxalphanames=10,
+]{biblatex}
+\bibliography{tech.bib}
 
 \begin{document}
 
 \noindent
 \begin{center}
-	\textbf{{\Large MAGNETI SUPERCONDUTTORI}} \\
+	\textbf{{\Large RELAZIONE TECNICA - MAGNETI SUPERCONDUTTORI}} \\
 \end{center}
 
 \noindent
@@ -81,7 +86,7 @@ Quindi se consideriamo la legge di Ampere-Maxwell
 	\curl{E} = - \pder{\ve{B}}{t} = 0
 \end{equation*}
 Quanto illustrato sopra porterebbe quindi a dire che il campo magnetico all'interno del
-superconduttore è costante e quindi il flusso sarà a sua volta costante.
+superconduttore è costante e quindi il flusso dovrebbe essere, a sua volta, costante.
 
 In realtà il lavoro di Meissner ha dimostrato che il comportamento del superconduttore è ben
 diverso, infatti l'espulsione del campo magnetico deriva dalla presenza di "correnti di
@@ -89,8 +94,7 @@ schermatura"\footnote{screening currents} sulla superficie del superconduttore c
 campo magnetico opposto a quello imposto sul conduttore, cancellandone
 l'effetto \cite{super-fundamentals}. Ulteriori studi da parte dei fratelli London dimostrarono che,
 in realtà, vi è un certo livello di penetrazione del campo magnetico all'interno del conduttore, ma
-l'intensità di quest'ultimo scala esponenzialmente con la distanza di penetrazione all'interno del
-materiale \cite{ssp}.
+l'intensità di quest'ultimo scala tende verso $0$ con velocità esponenziale in funzione della profondità di penetrazione \cite{ssp}.
 
 \bigskip
 \noindent
@@ -110,7 +114,7 @@ magnetico (\emph{normal state}). Questa caratteristica è resa evidente da Figur
 	}\label{fig:phase-diagram}
 \end{figure}
 
-I conduttori di secondo tipo furono scoperti sperimentalmente in da una ricerca del 1937 \cite{type-2} e la teoria ad essi associata fu ulteriormente ampliata da interpretazioni nel regno della meccanica quantistica nei decenni a seguire. La necessità di nuove teorie e spiegazioni era dettata dal comportamento ibrido dei superconduttori del secondo tipo (mostrato in Figura \ref{fig:phase-diagram}), questi infatti:
+I conduttori di secondo tipo furono scoperti sperimentalmente durante un progetto di ricerca del 1937 \cite{type-2} e la teoria ad essi associata fu ulteriormente ampliata da interpretazioni nel regno della meccanica quantistica nei decenni a seguire. La necessità di nuove teorie e spiegazioni era dettata dal comportamento ibrido dei superconduttori del secondo tipo (mostrato in Figura \ref{fig:phase-diagram}), questi infatti:
 \begin{itemize}
 	\item Hanno uno stato superconduttivo.
 	\item Hanno un \emph{meissner state}.
@@ -118,9 +122,28 @@ I conduttori di secondo tipo furono scoperti sperimentalmente in da una ricerca 
 \end{itemize}
 Delle nuove teorie erano necessarie per essere in grado di spiegare questo stato ibrido tra superconduttività e normal-conduttività.
 
-Quando un superconduttore del secondo tipo entra nello stato ibrido viene concessa la penetrazione del campo magnetico all'interno della superficie in certi punti del superconduttore, in virtù della struttura che si viene a formare sono noti come vortici, mentre in altri la resistenza rimane a $0$. Il comportamento in prossimità dei vortici diviene normal-conduttivo e (come succedeva per i superconduttori del primo tipo) si generano delle \emph{screening currents} che vorticano\footnote{Ecco da dove viene il nome vortice usato in precedenza} intorno al punto di penetrazione e si oppongono alla presenza del campo all'interno del superconduttore.
+\begin{figure}[h!]
+	\centering
 
-Siccome, per definizione, la corrente elettrica prende il percorso di minor resistenza il conduttore risulta comunque avere resistenza $0$ (anche con una parziale penetrazione del campo magnetico al suo interno), affinchè il superconduttore possa rimanere in una situazione di perdita $0$ è necessario fare in modo che i vortici rimangano fissati a impurità del reticolo cristallino.
+	\includegraphics[scale=0.35]{fig/vortex.png}
+	\caption{
+		La struttura dei vortici che si vengono a formare in un superconduttore del secondo tipo \cite{typ2-cambridge}
+	}\label{fig:vortices}
+\end{figure}
+
+Quando un superconduttore del secondo tipo entra nello stato ibrido, alcuni punti all'interno del superconduttore concedono la penetrazione del campo magnetico esterno, mentre gli altri punti rimangono invariati. Intorno ai punti in cui il campo magnetico penetra si vengono a formare delle \emph{correnti di schermatura} che proteggono il superconduttore dagli effetti distruttivi della permeazione del campo magnetico, queste strutture sono note come vortici e si possono vedere in maniera molto chiara in Figura \ref{fig:vortices}.
+
+Il comportamento in prossimità dei vortici diviene normal-conduttivo mentre, siccome nel resto del materiale le condizioni di superconduzione ancora valgono, quindi la resistenza elettrica è $0$, e la corrente prende sempre il percorso di minor resistenza, risulta che il metallo si comporta ancora come se fosse un superconduttore in condizioni normali. L'unica condizione necessaria affinchè questo stato permanga è che i vortici rimangano fissati a impurità all'interno del reticolo cristallino e non comincino a vibrare o muoversi, questa tecnica di bloccaggio è nota come \emph{flux pinning} \cite{flux-pinning}.
+
+È molto interessante a tal proposito concludere con il concetto di densità di corrente critica \cite{mat-pinning}. Le linee di campo vengono tenute in posizione da asperità presenti all'interno del materiale che esercitano una forza di richiamo, simile a una forza di attrito, e controbilanciano la forza di Lorentz che metterebbe i vortici in movimento. Possiamo chiamare $F_p$ (pinning force density) la forza di richiamo totale per unità di volume che queste asperità sono in grado di esercitare sulle linee di flusso.
+
+L'intensità di corrente critica può essere misurata come segue:
+\begin{equation*}
+	J_c = \frac{F_p}{B}
+\end{equation*}
+e non si tratta di una caratteristica intrinseca del materiale utilizzato ma si tratta di una proprietà unica che dipende dal processo di produzione del superconduttore, pertanto due cavi dello stesso materiale potrebbero avere valori di densità di corrente critica leggermente diversi.
+
+Si potrebbe inoltre pensare che, dato un superconduttore nello stato ibrido, si possa fare passare una qualsiasi corrente di densità inferiore a $J_c$ senza dissipazione. È però possibile dimostrare che ciò vale solamente per la corrente continua, qualsiasi passaggio di corrente alternata o corrente che varia nel tempo è soggetta a dissipazione pur rimanendo al di sotto del valore critico di densità di corrente \cite{mat-pinning}.
 
 \bigskip
 \phantomsection
